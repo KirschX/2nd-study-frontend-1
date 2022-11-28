@@ -1,16 +1,15 @@
 export default function SearchInput({ $target, initialState, onChange }) {
   this.$element = document.createElement("form");
   this.$element.className = "SearchInput";
+  // this.$element.focus();
   this.state = initialState;
 
   $target.appendChild(this.$element);
-  //   console.log($target);
 
   this.render = () => {
     this.$element.innerHTML = `
-    <input class="SearchInput__input" type="text" placeholder="프로그램 언어를 입력하세요." value="${this.state}">
+    <input autofocus class="SearchInput__input" type="text" placeholder="프로그램 언어를 입력하세요." value="${this.state} ">
     `;
-    // console.log("asd");
   };
 
   this.render();
