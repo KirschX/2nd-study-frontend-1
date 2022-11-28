@@ -57,6 +57,8 @@ export default function Suggestion({ $target, initialState, onSelect }) {
           ...this.state,
           selectedIndex: nextIndex,
         });
+      } else if (e.key === "Enter") {
+        onSelect(this.state.items[this.state.selectedIndex]);
       }
     }
   });

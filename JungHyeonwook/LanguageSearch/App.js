@@ -42,6 +42,9 @@ export default function App({ $target }) {
       cursor: 0,
       items: [],
     },
+    onSelect: (language) => {
+      alert(language);
+    },
   });
 
   //   console.log(searchInput);
