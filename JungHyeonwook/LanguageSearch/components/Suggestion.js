@@ -62,4 +62,16 @@ export default function Suggestion({ $target, initialState, onSelect }) {
       }
     }
   });
+
+  this.$element.addEventListener("click", (e) => {
+    const $li = e.target.closest("li");
+    if ($li) {
+      const { index } = $li.dataset;
+      try {
+        onSelect(this.state.items[parseInt(index)]);
+      } catch (e) {
+        alert("Error!");
+      }
+    }
+  });
 }
